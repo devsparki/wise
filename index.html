@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wise — Product Studio</title>
+  <meta name="description" content="Construímos apps, sites e software que impulsionam negócios. Wise Product Studio." />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Lucide Icons (CDN) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg">
+
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="container row space-between v-center h-16">
+      <div class="row v-center gap-8">
+        <div class="logo">
+          <i data-lucide="sparkles" class="icon-20"></i>
+        </div>
+        <span class="brand">Wise</span>
+        <span class="badge">Product Studio</span>
+      </div>
+      <nav class="nav-desktop">
+        <a class="nav-link" href="#servicos">Serviços</a>
+        <a class="nav-link" href="#portfolio">Portfólio</a>
+        <a class="nav-link" href="#processo">Processo</a>
+        <a class="nav-link" href="#precos">Planos</a>
+        <a class="nav-link" href="#sobre">Sobre</a>
+        <button class="btn btn-primary rounded-2xl" data-scroll="#contato">
+          Fale conosco
+        </button>
+      </nav>
+
+      <button class="btn-icon nav-toggle" aria-label="Menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+
+    <div class="nav-mobile" id="navMobile" hidden>
+      <div class="container py-12 grid gap-8">
+        <button class="nav-mobile-link" data-scroll="#servicos">Serviços</button>
+        <button class="nav-mobile-link" data-scroll="#portfolio">Portfólio</button>
+        <button class="nav-mobile-link" data-scroll="#processo">Processo</button>
+        <button class="nav-mobile-link" data-scroll="#precos">Planos</button>
+        <button class="nav-mobile-link" data-scroll="#sobre">Sobre</button>
+        <button class="btn btn-primary rounded-2xl w-full" data-scroll="#contato">Contato</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-blobs" aria-hidden="true">
+      <div class="blob blob-indigo"></div>
+      <div class="blob blob-cyan"></div>
+    </div>
+
+    <div class="container grid hero-grid">
+      <div class="reveal fade-up">
+        <div class="chip chip-dark mb-16">
+          <i data-lucide="shield-check" class="icon-16"></i>
+          <span>Software feito sob medida</span>
+        </div>
+
+        <h1 class="h1">
+          Construímos apps, sites e software que
+          <span class="grad">impulsionam negócios</span>
+        </h1>
+        <p class="lead max-w-xl">
+          Na Wise, transformamos ideias em produtos digitais escaláveis e bonitos. Do zero ao lançamento, com qualidade e velocidade.
+        </p>
+
+        <div class="row gap-12 mt-24 wrap">
+          <button class="btn btn-primary rounded-2xl" data-scroll="#contato">
+            Comece um projeto
+            <i data-lucide="arrow-right" class="icon-16 ml-8"></i>
+          </button>
+          <button class="btn btn-outline rounded-2xl" data-scroll="#portfolio">
+            Ver portfólio
+          </button>
+        </div>
+
+        <div class="row gap-24 mt-24 small text-muted wrap">
+          <div class="row gap-8 v-center">
+            <i data-lucide="timer" class="icon-16"></i> Entrega ágil
+          </div>
+          <div class="row gap-8 v-center">
+            <i data-lucide="cpu" class="icon-16"></i> Stack moderna
+          </div>
+          <div class="row gap-8 v-center">
+            <i data-lucide="users" class="icon-16"></i> Equipe sênior
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal fade-up">
+        <div class="card shadow-xl rounded-3xl">
+          <div class="card-header">
+            <div class="row v-center gap-8">
+              <i data-lucide="rocket" class="icon-20"></i>
+              <h3 class="card-title">Lançamento sem dor de cabeça</h3>
+            </div>
+          </div>
+          <div class="card-content grid gap-16">
+            <div class="grid grid-3 text-center gap-12">
+              <div class="pill">
+                <i data-lucide="smartphone" class="icon-24 mx-auto"></i>
+                <p class="pill-text">Apps</p>
+              </div>
+              <div class="pill">
+                <i data-lucide="globe" class="icon-24 mx-auto"></i>
+                <p class="pill-text">Websites</p>
+              </div>
+              <div class="pill">
+                <i data-lucide="code-2" class="icon-24 mx-auto"></i>
+                <p class="pill-text">Software</p>
+              </div>
+            </div>
+
+            <ul class="list list-check text-muted">
+              <li>UX/UI centrado no usuário</li>
+              <li>Desenvolvimento full-stack</li>
+              <li>Integrações e APIs</li>
+              <li>Cloud, DevOps & observabilidade</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logos -->
+  <section class="py-32">
+    <div class="container center wrap row gap-32 logos opacity-70">
+      <div class="logo-text">AWS</div>
+      <div class="logo-text">Vercel</div>
+      <div class="logo-text">Google Cloud</div>
+      <div class="logo-text">Stripe</div>
+      <div class="logo-text">React</div>
+      <div class="logo-text">Flutter</div>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section id="servicos" class="py-80">
+    <div class="container">
+      <div class="reveal fade-up">
+        <h2 class="h2">O que fazemos</h2>
+        <p class="muted max-w-2xl mt-8">
+          Soluções ponta-a-ponta para tirar sua ideia do papel ou evoluir um produto existente.
+        </p>
+      </div>
+
+      <div class="grid grid-3 gap-24 mt-40">
+        <!-- cards de serviço -->
+        <article class="card rounded-3xl hover-elevate reveal fade-up">
+          <div class="card-header">
+            <h3 class="card-title row v-center gap-12">
+              <i data-lucide="smartphone" class="icon-20"></i>
+              Apps Mobile
+            </h3>
+          </div>
+          <div class="card-content">
+            <p class="muted small">
+              iOS e Android nativos ou cross-platform. Performance, acessibilidade e analytics desde o dia 1.
+            </p>
+          </div>
+        </article>
+
+        <article class="card rounded-3xl hover-elevate reveal fade-up">
+          <div class="card-header">
+            <h3 class="card-title row v-center gap-12">
+              <i data-lucide="globe" class="icon-20"></i>
+              Websites e Landing Pages
+            </h3>
+          </div>
+          <div class="card-content">
+            <p class="muted small">
+              Sites rápidos, SEO-friendly e fáceis de gerenciar. Do institucional a e-commerce.
+            </p>
+          </div>
+        </article>
+
+        <article class="card rounded-3xl hover-elevate reveal fade-up">
+          <div class="card-header">
+            <h3 class="card-title row v-center gap-12">
+              <i data-lucide="code-2" class="icon-20"></i>
+              Software Sob Medida
+            </h3>
+          </div>
+          <div class="card-content">
+            <p class="muted small">
+              Sistemas internos, dashboards e automações que encaixam no seu processo.
+            </p>
+          </div>
+        </article>
+
+        <article class="card rounded-3xl hover-elevate reveal fade-up">
+          <div class="card-header">
+            <h3 class="card-title row v-center gap-12">
+              <i data-lucide="sparkles" class="icon-20"></i>
+              UX/UI & Branding
+            </h3>
+          </div>
+          <div class="card-content">
+            <p class="muted small">
+              Design estratégico, protótipos navegáveis e identidade visual consistente.
+            </p>
+          </div>
+        </article>
+
+        <article class="card rounded-3xl hover-elevate reveal fade-up">
+          <div class="card-header">
+            <h3 class="card-title row v-center gap-12">
+              <i data-lucide="shield-check" class="icon-20"></i>
+              Consultoria & Squad as a Service
+            </h3>
+          </div>
+          <div class="card-content">
+            <p class="muted small">
+              Apoio técnico sênior, revisão de arquitetura e times dedicados.
+            </p>
+          </div>
+        </article>
+
+        <article class="card rounded-3xl hover-elevate reveal fade-up">
+          <div class="card-header">
+            <h3 class="card-title row v-center gap-12">
+              <i data-lucide="timer" class="icon-20"></i>
+              Manutenção & Suporte
+            </h3>
+          </div>
+          <div class="card-content">
+            <p class="muted small">
+              SLA claro, monitoramento e melhorias contínuas.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfólio -->
+  <section id="portfolio" class="py-80 bg-section">
+    <div class="container">
+      <h2 class="h2">Portfólio em destaque</h2>
+      <p class="muted max-w-2xl mt-8">
+        Alguns projetos recentes que nos orgulhamos de construir.
+      </p>
+
+      <div class="grid grid-3 gap-24 mt-40">
+        <!-- 6 projetos -->
+        <article class="card rounded-3xl overflow-hidden hover-elevate reveal fade-up">
+          <div class="aspect-video mock">Mockup 1</div>
+          <div class="card-header pb-8">
+            <div class="row space-between v-center">
+              <h3 class="card-title">Fintech Flow</h3>
+              <span class="badge badge-soft">App Mobile</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <p class="muted small">Banco digital com onboarding KYC, Pix e cartão virtual.</p>
+          </div>
+        </article>
+
+        <article class="card rounded-3xl overflow-hidden hover-elevate reveal fade-up">
+          <div class="aspect-video mock">Mockup 2</div>
+          <div class="card-header pb-8">
+            <div class="row space-between v-center">
+              <h3 class="card-title">Casa Verde</h3>
+              <span class="badge badge-soft">E-commerce</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <p class="muted small">Loja de móveis sustentáveis com CMS headless.</p>
+          </div>
+        </article>
+
+        <article class="card rounded-3xl overflow-hidden hover-elevate reveal fade-up">
+          <div class="aspect-video mock">Mockup 3</div>
+          <div class="card-header pb-8">
+            <div class="row space-between v-center">
+              <h3 class="card-title">NovaSaúde</h3>
+              <span class="badge badge-soft">Dashboard</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <p class="muted small">Plataforma de gestão de clínicas e prontuários.</p>
+          </div>
+        </article>
+
+        <article class="card rounded-3xl overflow-hidden hover-elevate reveal fade-up">
+          <div class="aspect-video mock">Mockup 4</div>
+          <div class="card-header pb-8">
+            <div class="row space-between v-center">
+              <h3 class="card-title">RocketEdu</h3>
+              <span class="badge badge-soft">Edtech</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <p class="muted small">Plataforma de cursos com video streaming e pagamentos.</p>
+          </div>
+        </article>
+
+        <article class="card rounded-3xl overflow-hidden hover-elevate reveal fade-up">
+          <div class="aspect-video mock">Mockup 5</div>
+          <div class="card-header pb-8">
+            <div class="row space-between v-center">
+              <h3 class="card-title">LogiTrack</h3>
+              <span class="badge badge-soft">SaaS B2B</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <p class="muted small">Roteirização e telemetria para frotas em tempo real.</p>
+          </div>
+        </article>
+
+        <article class="card rounded-3xl overflow-hidden hover-elevate reveal fade-up">
+          <div class="aspect-video mock">Mockup 6</div>
+          <div class="card-header pb-8">
+            <div class="row space-between v-center">
+              <h3 class="card-title">TasteHub</h3>
+              <span class="badge badge-soft">Delivery</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <p class="muted small">Marketplace white-label para restaurantes locais.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Processo -->
+  <section id="processo" class="py-80">
+    <div class="container">
+      <h2 class="h2">Como trabalhamos</h2>
+
+      <div class="grid grid-4 gap-24 mt-40">
+        <article class="card rounded-3xl reveal fade-up">
+          <div class="card-header">
+            <span class="badge badge-number">1</span>
+            <h3 class="card-title mt-12">Descoberta</h3>
+          </div>
+          <div class="card-content">
+            <p class="muted small">Alinhamento de objetivos, métricas e roadmap.</p>
+          </div>
+        </article>
+
+        <article class="card rounded-3xl reveal fade-up">
+          <div class="card-header">
+            <span class="badge badge-number">2</span>
+            <h3 class="card-title mt-12">Design & Prototipação</h3>
+          </div>
+          <div class="card-content">
+            <p class="muted small">Fluxos, protótipos navegáveis e testes rápidos.</p>
+          </div>
+        </article>
+
+        <article class="card rounded-3xl reveal fade-up">
+          <div class="card-header">
+            <span class="badge badge-number">3</span>
+            <h3 class="card-title mt-12">Desenvolvimento</h3>
+          </div>
+          <div class="card-content">
+            <p class="muted small">Sprints curtos, CI/CD e qualidade automatizada.</p>
+          </div>
+        </article>
+
+        <article class="card rounded-3xl reveal fade-up">
+          <div class="card-header">
+            <span class="badge badge-number">4</span>
+            <h3 class="card-title mt-12">Lançamento & Suporte</h3>
+          </div>
+          <div class="card-content">
+            <p class="muted small">Observabilidade, A/B tests e evolução contínua.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Planos -->
+  <section id="precos" class="py-80 bg-section">
+    <div class="container">
+      <h2 class="h2">Planos flexíveis</h2>
+      <p class="muted max-w-2xl mt-8">Escolha um modelo que se adapta ao momento do seu negócio. Valores indicativos.</p>
+
+      <div class="grid grid-3 gap-24 mt-40">
+        <article class="card rounded-3xl reveal fade-up">
+          <div class="card-header">
+            <div class="row space-between v-center">
+              <h3 class="card-title">Start</h3>
+            </div>
+            <div class="price">R$ 6.900</div>
+            <p class="muted small">Landing, MVPs e sites simples</p>
+          </div>
+          <div class="card-content">
+            <ul class="list list-check">
+              <li>Entrega em 2–4 semanas</li>
+              <li>SEO inicial + Analytics</li>
+              <li>Hospedagem gerenciada</li>
+            </ul>
+            <button class="btn btn-primary rounded-2xl w-full mt-16" data-scroll="#contato">Quero este plano</button>
+          </div>
+        </article>
+
+        <article class="card rounded-3xl ring-popular reveal fade-up">
+          <div class="card-header">
+            <div class="row space-between v-center">
+              <h3 class="card-title">Growth</h3>
+              <span class="badge">Mais popular</span>
+            </div>
+            <div class="price">R$ 14.900</div>
+            <p class="muted small">Apps/web completos</p>
+          </div>
+          <div class="card-content">
+            <ul class="list list-check">
+              <li>Sprints quinzenais</li>
+              <li>Design System + QA</li>
+              <li>Integrações com APIs</li>
+            </ul>
+            <button class="btn btn-primary rounded-2xl w-full mt-16" data-scroll="#contato">Quero este plano</button>
+          </div>
+        </article>
+
+        <article class="card rounded-3xl reveal fade-up">
+          <div class="card-header">
+            <div class="row space-between v-center">
+              <h3 class="card-title">Squad</h3>
+            </div>
+            <div class="price">R$ sob consulta</div>
+            <p class="muted small">Time dedicado</p>
+          </div>
+          <div class="card-content">
+            <ul class="list list-check">
+              <li>Product + Tech Leads</li>
+              <li>Backlog contínuo</li>
+              <li>SLAs e observabilidade</li>
+            </ul>
+            <button class="btn btn-primary rounded-2xl w-full mt-16" data-scroll="#contato">Quero este plano</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section class="py-80">
+    <div class="container">
+      <h2 class="h2">Clientes felizes</h2>
+
+      <div class="grid grid-3 gap-24 mt-40">
+        <!-- 3 depoimentos -->
+        <article class="card rounded-3xl reveal fade-up">
+          <div class="card-content pt-24">
+            <div class="row gap-8 text-amber mb-12">
+              <i data-lucide="star" class="icon-16 fill"></i>
+              <i data-lucide="star" class="icon-16 fill"></i>
+              <i data-lucide="star" class="icon-16 fill"></i>
+              <i data-lucide="star" class="icon-16 fill"></i>
+              <i data-lucide="star" class="icon-16 fill"></i>
+            </div>
+            <p class="quote">“A Wise entregou além do esperado. O site ficou lindo e vende muito mais.”</p>
+
+            <div class="row v-center gap-12 mt-16">
+              <img class="avatar" alt="Avatar Marina Alves"
+                   src="https://api.dicebear.com/9.x/initials/svg?seed=Marina%20Alves" />
+              <div>
+                <div class="semibold">Marina Alves</div>
+                <div class="tiny muted">CEO, Casa Verde</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card rounded-3xl reveal fade-up">
+          <div class="card-content pt-24">
+            <div class="row gap-8 text-amber mb-12">
+              <i data-lucide="star" class="icon-16 fill"></i>
+              <i data-lucide="star" class="icon-16 fill"></i>
+              <i data-lucide="star" class="icon-16 fill"></i>
+              <i data-lucide="star" class="icon-16 fill"></i>
+              <i data-lucide="star" class="icon-16 fill"></i>
+            </div>
+            <p class="quote">“Excelente qualidade técnica e comunicação. Viraram nosso time estendido.”</p>
+
+            <div class="row v-center gap-12 mt-16">
+              <img class="avatar" alt="Avatar Rafael Lima"
+                   src="https://api.dicebear.com/9.x/initials/svg?seed=Rafael%20Lima" />
+              <div>
+                <div class="semibold">Rafael Lima</div>
+                <div class="tiny muted">CTO, LogiTrack</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card rounded-3xl reveal fade-up">
+          <div class="card-content pt-24">
+            <div class="row gap-8 text-amber mb-12">
+              <i data-lucide="star" class="icon-16 fill"></i>
+              <i data-lucide="star" class="icon-16 fill"></i>
+              <i data-lucide="star" class="icon-16 fill"></i>
+              <i data-lucide="star" class="icon-16 fill"></i>
+              <i data-lucide="star" class="icon-16 fill"></i>
+            </div>
+            <p class="quote">“Cronograma em dia e zero dor de cabeça no lançamento. Recomendo!”</p>
+
+            <div class="row v-center gap-12 mt-16">
+              <img class="avatar" alt="Avatar Bianca Souza"
+                   src="https://api.dicebear.com/9.x/initials/svg?seed=Bianca%20Souza" />
+              <div>
+                <div class="semibold">Bianca Souza</div>
+                <div class="tiny muted">PM, RocketEdu</div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre" class="py-80 bg-section">
+    <div class="container grid about-grid">
+      <div class="reveal fade-up">
+        <h2 class="h2">Sobre a Wise</h2>
+        <p class="muted mt-16">
+          Somos um estúdio de produto digital focado em resultado. Unimos estratégia, design e engenharia para criar experiências que as pessoas amam e que geram valor de negócio.
+        </p>
+        <ul class="list list-check mt-16">
+          <li>Mais de 50 projetos entregues</li>
+          <li>Time 100% sênior e remoto</li>
+          <li>Parcerias de longo prazo com clientes</li>
+        </ul>
+        <div class="row gap-12 mt-24 wrap">
+          <a class="btn btn-primary rounded-2xl" href="#contato">Trabalhe conosco</a>
+          <a class="btn btn-outline rounded-2xl" href="#portfolio">Ver cases</a>
+        </div>
+      </div>
+
+      <div class="reveal fade-up grid about-media gap-16">
+        <div class="tile tile-indigo"></div>
+        <div class="tile tile-slate"></div>
+        <div class="card rounded-3xl p-24">
+          <h3 class="semibold">Stack favorita</h3>
+          <p class="muted small mt-8">React, Next.js, Node, Postgres, Prisma, Tailwind, Flutter, AWS, Vercel.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-64">
+    <div class="container">
+      <div class="card cta">
+        <div class="card-content grid cta-grid">
+          <div>
+            <h3 class="h3">Pronto para construir algo incrível?</h3>
+            <p class="muted-light mt-8">Conte sua ideia e retornamos com um plano de ação e orçamento inicial.</p>
+          </div>
+          <div class="row gap-12 wrap justify-end">
+            <button class="btn btn-light rounded-2xl" data-scroll="#contato">Começar agora</button>
+            <a class="btn btn-outline-light rounded-2xl" href="#" download>Baixar apresentação</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="py-80 bg-section">
+    <div class="container">
+      <h2 class="h2">Vamos conversar</h2>
+      <p class="muted mt-8">Preencha o formulário e receba uma resposta em até 1 dia útil.</p>
+
+      <div class="grid contact-grid gap-24 mt-40">
+        <div class="card rounded-3xl">
+          <div class="card-content p-24">
+            <form action="mailto:contato@wise.dev.br" method="post" enctype="text/plain" class="grid gap-16" id="contactForm">
+              <div class="grid grid-2 gap-16">
+                <input class="input" required placeholder="Seu nome" name="nome" />
+                <input class="input" required type="email" placeholder="Seu e-mail" name="email" />
+              </div>
+              <input class="input" placeholder="Empresa (opcional)" name="empresa" />
+              <textarea class="textarea" rows="6" required placeholder="Conte brevemente sobre o projeto" name="mensagem"></textarea>
+              <button type="submit" class="btn btn-primary rounded-2xl">
+                Enviar
+                <i data-lucide="send" class="icon-16 ml-8"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="grid gap-16">
+          <div class="card rounded-3xl">
+            <div class="card-content p-24 grid gap-12 small">
+              <div class="row v-center gap-8"><i data-lucide="mail" class="icon-16"></i> contato@wise.dev.br</div>
+              <div class="row v-center gap-8"><i data-lucide="phone" class="icon-16"></i> +55 (11) 97777-1234</div>
+              <div class="row v-center gap-8"><i data-lucide="map-pin" class="icon-16"></i> São Paulo, SP — Brasil</div>
+            </div>
+          </div>
+          <div class="card rounded-3xl">
+            <div class="card-header">
+              <h3 class="card-title">Links</h3>
+            </div>
+            <div class="card-content p-24 row wrap gap-12">
+              <a class="chip" href="#" aria-label="GitHub"><i data-lucide="github" class="icon-16"></i> GitHub</a>
+              <a class="chip" href="#" aria-label="LinkedIn"><i data-lucide="linkedin" class="icon-16"></i> LinkedIn</a>
+              <a class="chip chip-emerald" href="#" aria-label="WhatsApp"><i data-lucide="phone" class="icon-16"></i> WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-80">
+    <div class="container">
+      <h2 class="h2">Perguntas frequentes</h2>
+
+      <div class="grid grid-2 gap-24 mt-32">
+        <article class="card rounded-3xl reveal fade-up">
+          <div class="card-header">
+            <h3 class="card-title small">Quanto tempo leva para lançar?</h3>
+          </div>
+          <div class="card-content">
+            <p class="muted small">
+              Projetos Start levam 2–4 semanas. Growth costuma levar 6–10 semanas. Squads são contínuos.
+            </p>
+          </div>
+        </article>
+
+        <article class="card rounded-3xl reveal fade-up">
+          <div class="card-header">
+            <h3 class="card-title small">Como funcionam os pagamentos?</h3>
+          </div>
+          <div class="card-content">
+            <p class="muted small">
+              50% na entrada e 50% na entrega para projetos fixos. Para Squads, modelo mensal.
+            </p>
+          </div>
+        </article>
+
+        <article class="card rounded-3xl reveal fade-up">
+          <div class="card-header">
+            <h3 class="card-title small">Vocês trabalham com contrato e NDA?</h3>
+          </div>
+          <div class="card-content">
+            <p class="muted small">
+              Sim, enviamos contrato de prestação de serviços e assinamos NDA quando necessário.
+            </p>
+          </div>
+        </article>
+
+        <article class="card rounded-3xl reveal fade-up">
+          <div class="card-header">
+            <h3 class="card-title small">Vocês dão garantia?</h3>
+          </div>
+          <div class="card-content">
+            <p class="muted small">
+              Bugs encontrados em até 30 dias após o go-live são corrigidos sem custo.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cookie Consent -->
+  <div class="cookie" id="cookie" role="dialog" aria-live="polite" hidden>
+    <div class="container">
+      <div class="cookie-inner">
+        <p class="small">
+          Usamos cookies para melhorar sua experiência. Ao continuar, você concorda com nossa
+          <a href="#" class="link">Política de Privacidade</a>.
+        </p>
+        <div class="row gap-12 ml-auto">
+          <button class="btn btn-outline rounded-2xl" data-cookie="reject">Rejeitar</button>
+          <button class="btn btn-primary rounded-2xl" data-cookie="accept">Aceitar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <div class="container row wrap space-between v-center gap-16">
+      <div class="row v-center gap-8">
+        <div class="logo-sm">
+          <i data-lucide="sparkles" class="icon-16"></i>
+        </div>
+        <span class="semibold">Wise</span>
+      </div>
+      <p class="tiny muted" id="copyright">© 2025 Wise Tech Studio. Todos os direitos reservados.</p>
+      <div class="row gap-16 tiny">
+        <a href="#" class="link">Privacidade</a>
+        <a href="#" class="link">Termos</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
